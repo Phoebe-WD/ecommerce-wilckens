@@ -1,0 +1,61 @@
+:root {
+    --font-principal: 'IBM Plex Mono',
+        monospace;
+    --background-color: #00F3BB;
+    --background-hover: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    --color-principal: #060A24;
+    --text-hover: #00F3BB;
+    --text-active: rgba(6, 10, 36, 0.56);
+    --text-button: #060A24;
+    --button-hover: #FFFFFF;
+}
+
+.NavBar header {
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NavBar header .logo img {
+    width: 20%;
+    height: 20%;
+}
+
+.NavBar header nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NavBar header nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.NavBar header nav ul li a {
+    font-family: var(--font-principal);
+    color: var(--color-principal);
+    text-decoration: none;
+    margin-right: 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.NavBar header nav ul li a:hover {
+    color: var(--text-hover);
+    text-decoration: line-through;
+}
+
+.NavBar header nav ul li a:active {
+    color: var(--text-active);
+    text-decoration: line-through;
+}
