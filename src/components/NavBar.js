@@ -18,8 +18,8 @@ export default function NavBar(){
           <li><a href="/"> Tiendas </a></li>
           <li><a href="/"> Contacto </a></li>
         </ul>
-      </nav>
       <CartWidget/>
+      </nav>
     </header>
     </div>
     );
