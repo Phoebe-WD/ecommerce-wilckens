@@ -6,7 +6,6 @@ import CartWidget from '../CartWidget/CartWidget';
 export default function NavBar(){
     return(
     <div className="NavBar">
-
     <header>
       <div className="logo">
         <img src={logo} alt="logo" />
