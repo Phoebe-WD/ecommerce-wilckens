@@ -2,7 +2,6 @@
     --font-principal: 'IBM Plex Mono',
         monospace;
     --background-color: #00F3BB;
-    --background-hover: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
     --color-principal: #060A24;
     --text-hover: #00F3BB;
     --text-active: rgba(6, 10, 36, 0.56);

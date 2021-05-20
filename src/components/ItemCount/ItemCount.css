@@ -1,0 +1,45 @@
+.ItemCount {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ItemCount .Contador {
+    width: 15%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.ItemCount .Contador button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.ItemCount .Contador input {
+    width: 15%;
+}
+
+.AddtoCart button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    border: 1px solid lightseagreen;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Balsamiq Sans',
+        cursive;
+    font-weight: 400;
+    border-radius: 10px;
+}
+
+.AddtoCart button:hover {
+    color: #fff;
+    background-color: lightseagreen;
+    transition: all .4s ease;
+}
