@@ -12,8 +12,8 @@ export default function NavBar(){
       </div>
       <nav>
         <ul>
-          <li><a href="/"> Menú </a></li>
-          <li><a href="/"> Nosotros </a></li>
+          <li><a href="/"> Home </a></li>
+          <li><a href="/"> Productos </a></li>
           <li><a href="/"> Tiendas </a></li>
           <li><a href="/"> Contacto </a></li>
         </ul>

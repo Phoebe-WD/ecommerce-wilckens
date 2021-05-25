@@ -32,7 +32,7 @@ export default function ItemCount( { stock, initial, onAdd }){
             <button onClick={minCounter}>
                 <RemoveCircleIcon style={{ color: 'lightseagreen'}}/>
             </button>
-            <input type="number" value={contador}/>
+            <p>{contador}</p>
             <button onClick={addCounter}>
                 <AddCircleIcon style={{ color: 'lightseagreen'}}/>
             </button>

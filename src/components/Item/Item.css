@@ -1,0 +1,21 @@
+.Item .ItemProduct {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.Item img,
+.Item h2,
+.Item p {
+    margin: 0 auto;
+}
+
+.Item .precio::before {
+    content: "$"
+}
+
+.Item h2,
+.Item p {
+    font-family: 'Balsamiq Sans',
+        cursive;
+}
