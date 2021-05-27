@@ -1,25 +1,16 @@
-import React, { useState } from "react";
-import ItemCount from "../ItemCount/ItemCount";
+import React from "react";
 import './Item.css';
 
 
-export default function Item({ name, description, img, price }){
-        const[cantidad, setCantidad] = useState(1);
+export default function Item({ id, name, description, img, precio, stock }){
 
-    const handleCantidad = (cantidad) => {
-        setCantidad(cantidad);
-    }
     return(
 <div className="Item">
     <div className="ItemProduct">
         <img src={img} alt={name}/>
         <h2>{name}</h2>
         <p>{description}</p>
-        <p className="precio">{price}</p>
-        <ItemCount stock={5} initial={1} onAdd={handleCantidad}/>
-       <div className="AddtoCart">
-            <button>Agregar al Carro ({cantidad})</button>
-        </div>
+        <p className="precio">{precio}</p>
     </div>
 </div>
     )

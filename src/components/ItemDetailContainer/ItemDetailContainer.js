@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import ItemList from "../ItemList/ItemList";
-import "./ItemListContainer.css";
+import React, { useState , useEffect } from "react";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import "./ItemDetailContainer.css";
 
-export default function ItemListContainer(){
-    const [curso, setCurso] = useState(null);
+export default function ItemDetailContainer(){
+    const [product, setProduct] = useState({});
    
     useEffect(() => {
-    const myCursos = new Promise((resolve, reject) => {
+    const getItems = new Promise((resolve, reject) => {
         let myProducto = [{
                 id: 1,
                 name: "HTML",
@@ -50,22 +50,19 @@ export default function ItemListContainer(){
             
         ];
         setTimeout(() => {
-            resolve(myProducto)
+            resolve(myProducto[0])
         }, 2000);
     });
-    myCursos.then(result => {
-        console.log(result)
-        setCurso(result);
+    getItems.then(value => {
+        console.log(value)
+        setProduct(value);
     });
     }, [])
-    return ( 
-        <div className="ItemListContainer">
-{curso?.map((item) => {
-                return(
-                    <ItemList key={item.id} id={item.id} img={item.img} name={item.name} description={item.description} price={item.precio}/>
-                 );
-            })
-        }
+    return (
+        <div className="ItemDetailContainer">
+        <h2 className="title" style={{textAlign: "center"}}>ITEM DETAIL DEMOSTRACIÓN</h2>
+        <ItemDetail item={product}/>
         </div>
-            );
+        )
+
 }

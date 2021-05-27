@@ -1,0 +1,31 @@
+.ItemDetail {
+    margin: auto;
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ItemDetail .ItemsDetails {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.ItemDetail img,
+.ItemDetail h2,
+.ItemDetail p {
+    margin: 0 auto;
+}
+
+.ItemDetail .precio::before {
+    content: "$"
+}
+
+.ItemDetail h2,
+.ItemDetail p {
+    font-family: 'Balsamiq Sans',
+        cursive;
+}

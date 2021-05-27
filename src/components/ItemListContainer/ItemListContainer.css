@@ -1,0 +1,9 @@
+.ItemListContainer {
+    margin: auto;
+    margin-top: 100px;
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
