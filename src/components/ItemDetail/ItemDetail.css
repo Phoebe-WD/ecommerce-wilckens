@@ -3,20 +3,24 @@
     margin-top: 20px;
     width: 90%;
     display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.ItemDetail .ItemsDetails {
+    margin: 0 auto;
+    width: 40%;
+    height: 300px;
+    display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.ItemDetail .ItemsDetails {
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-.ItemDetail img,
-.ItemDetail h2,
-.ItemDetail p {
+.ItemDetail .ItemsDetails .ItemImg img,
+.ItemDetail .ItemsDetails .ItemInfo h2,
+.ItemDetail .ItemsDetails .ItemInfo p {
     margin: 0 auto;
 }
 
@@ -28,4 +32,65 @@
 .ItemDetail p {
     font-family: 'Balsamiq Sans',
         cursive;
+}
+
+.ItemDetail h2,
+.ItemDetail .precio {
+    font-size: 30px;
+}
+
+.ItemDetail p {
+    font-size: 16px;
+}
+
+.ItemDetail img {
+    width: 300px;
+    height: 300px;
+}
+
+.ItemDetail .ItemsDetails .ItemImg {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ItemDetail .ItemsDetails .ItemInfo {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.ItemDetail .AddToCart {
+    display: block;
+    margin: 0 auto;
+}
+
+.ItemDetail .AddToCart a {
+    text-decoration: none;
+}
+
+.ItemDetail .AddToCart button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    border: 1px solid lightseagreen;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    font-family: 'Balsamiq Sans',
+        cursive;
+    font-weight: 400;
+    border-radius: 10px;
+}
+
+.ItemDetail .AddToCart button:hover {
+    color: #fff;
+    background-color: lightseagreen;
+    transition: all .4s ease;
 }

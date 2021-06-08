@@ -1,0 +1,57 @@
+:root {
+    --font-principal: 'IBM Plex Mono',
+        monospace;
+    --background-color: #00F3BB;
+    --color-principal: #060A24;
+    --text-hover: #00F3BB;
+    --text-active: rgba(6, 10, 36, 0.56);
+    --text-button: #060A24;
+    --button-hover: #FFFFFF;
+}
+
+.FooterEcom {
+    position: relative;
+    bottom: 0;
+}
+
+.FooterEcom footer {
+    background-color: #fff;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.FooterEcom .FooterContainer {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FooterEcom .Copyright p {
+    font-family: var(--font-principal);
+    font-size: 16px;
+    color: var(--color-principal);
+    line-height: 28px;
+}
+
+.FooterEcom .IconsSocial {
+    width: 15%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.FooterEcom .IconsSocial a {
+    color: var(--color-principal);
+    font-size: 18px;
+}
+
+.FooterEcom .IconsSocial a:hover {
+    color: var(--text-hover);
+}

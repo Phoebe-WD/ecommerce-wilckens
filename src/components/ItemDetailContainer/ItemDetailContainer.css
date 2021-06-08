@@ -11,3 +11,9 @@
 .ItemDetailContainer .title {
     margin-top: 100px;
 }
+
+.ItemDetailContainer .MuiCircularProgress-colorPrimary {
+    display: block;
+    margin: 0 auto;
+    color: lightseagreen;
+}

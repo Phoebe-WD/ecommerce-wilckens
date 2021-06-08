@@ -3,12 +3,16 @@ import Item from "../Item/Item";
 import "./ItemList.css";
 
 
-export default function ItemList( { id, name, description, stock, img, price } ) {
-
-
+export default function ItemList( { items, categoryId } ) {
+    console.log(categoryId);
     return ( 
         <div className="ItemList">
-            <Item key={id} id={id} name={name} description={description} stock={stock} img={img} precio={price}/>
+           {items?.map(item => {
+               return (
+                   <Item key={item.id}
+                   id={item.id} name={item.name} price={item.precio} description={item.description} descriptionLarga={item.descriptionLarge} stock={item.stock} img={item.img} categoria={item.categoryId}/>
+               )
+           })}
         </div>
             );
 }

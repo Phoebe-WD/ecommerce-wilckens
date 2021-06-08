@@ -5,7 +5,7 @@
 }
 
 .Item img,
-.Item h2,
+.Item a,
 .Item p {
     margin: 0 auto;
 }
@@ -14,8 +14,44 @@
     content: "$"
 }
 
-.Item h2,
+.Item a,
 .Item p {
     font-family: 'Balsamiq Sans',
         cursive;
+}
+
+.Item a {
+    text-decoration: none;
+    color: black;
+}
+
+.Item img {
+    width: 150px;
+    height: 150px;
+}
+
+.Item button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.Item button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    border: 1px solid lightseagreen;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    font-family: 'Balsamiq Sans',
+        cursive;
+    font-weight: 400;
+    border-radius: 10px;
+}
+
+.Item button:hover {
+    color: #fff;
+    background-color: lightseagreen;
+    transition: all .4s ease;
 }

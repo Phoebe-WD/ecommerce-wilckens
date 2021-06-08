@@ -1,0 +1,61 @@
+[{
+        "id": 1,
+        "categoryId": 1,
+        "name": "HTML",
+        "description": "HyperText Markup Language, ",
+        "descriptionLarge": "Aprende sobre HTML para poder crear tu propio sitio web y entender como estos se componen",
+        "stock": 10,
+        "img": "https://i.imgur.com/7e6PcDf.png",
+        "precio": 20
+    },
+    {
+        "id": 2,
+        "categoryId": 1,
+        "name": "CSS",
+        "description": "Cascading Style Sheets",
+        "descriptionLarge": "Aprende sobre CSS para poder estilar tu propio sitio web como más te guste",
+        "stock": 8,
+        "img": "https://i.imgur.com/0UPOOKV.png",
+        "precio": 30
+    },
+    {
+        "id": 3,
+        "categoryId": 2,
+        "name": "JavaScript",
+        "description": "Lenguaje de programación",
+        "descriptionLarge": "Aprende sobre JS para darle funcionalidad a tu sitio web o a tu aplicación",
+        "stock": 6,
+        "img": "https://i.imgur.com/1OoGZMh.png",
+        "precio": 50
+    },
+    {
+        "id": 4,
+        "categoryId": 3,
+        "name": "React",
+        "description": "Librería de JavaScript",
+        "descriptionLarge": "Aprende ReactJs y dale mayor forma a tu app o sitio web",
+        "stock": 5,
+        "img": "https://i.imgur.com/TngJ2Ua.png",
+        "precio": 70
+    },
+    {
+        "id": 5,
+        "categoryId": 2,
+        "name": "TypeScript",
+        "description": "Lenguaje de programación",
+        "descriptionLarge": "Aprende TypeScript para darle mayor versatilidad a tu app o sitio web",
+        "stock": 3,
+        "img": "https://i.imgur.com/s7V4oLM.png",
+        "precio": 50
+    },
+    {
+        "id": 6,
+        "categoryId": 2,
+        "name": "Tripack",
+        "description": "Aprende FrontEnd",
+        "descriptionLarge": "Aprende HTML, CSS & JS para armar tu propio sitio a tu medida",
+        "stock": 4,
+        "img": "https://i.imgur.com/yqh5EEu.png",
+        "precio": 100
+    }
+]

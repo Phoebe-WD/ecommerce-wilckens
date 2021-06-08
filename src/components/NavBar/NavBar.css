@@ -43,10 +43,11 @@
 .NavBar header nav ul li a {
     font-family: var(--font-principal);
     color: var(--color-principal);
-    text-decoration: none;
     margin-right: 50px;
     font-size: 16px;
     text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .NavBar header nav ul li a:hover {

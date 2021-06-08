@@ -1,71 +1,42 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
+import { useParams } from "react-router";
+import Data from '../../data';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 
 export default function ItemListContainer(){
     const [curso, setCurso] = useState(null);
-   
+    const [loader, setLoader] = useState(false);
+    const { catId } = useParams();
     useEffect(() => {
-    const myCursos = new Promise((resolve, reject) => {
-        let myProducto = [{
-                id: 1,
-                name: "HTML",
-                description: "HyperText Markup Language",
-                stock: 2,
-                img: 'https://via.placeholder.com/150',
-                precio: 20
-            },
-            {
-                id: 2,
-                name: "CSS",
-                description: "Cascading Style Sheets",
-                stock: 3,
-                img: 'https://via.placeholder.com/150',
-                precio: 30
-            },
-            {
-                id: 3,
-                name: "JavaScript",
-                description: "Lenguaje de programación",
-                stock: 5,
-                img: 'https://via.placeholder.com/150',
-                precio: 50
-            },
-            {
-                id: 4,
-                name: "React",
-                description: "Librería de JavaScript",
-                stock: 5,
-                img: 'https://via.placeholder.com/150',
-                precio: 70
-            },
-            {
-                id: 5,
-                name: "TypeScript",
-                description: "Lenguaje de programación",
-                stock: 5,
-                img: 'https://via.placeholder.com/150',
-                precio: 50
-            },
-            
-        ];
-        setTimeout(() => {
-            resolve(myProducto)
-        }, 2000);
+    const myCursos = new Promise((resolve) => {
+        setLoader(true)
+        setTimeout(() => {resolve(Data)
+    }
+        , 2000);
+        console.log(Data);
     });
-    myCursos.then(result => {
+    catId ? myCursos.then(result => {
         console.log(result)
-        setCurso(result);
-    });
-    }, [])
+        setCurso(result.filter ( i => i.categoryId === parseInt(catId)));
+        setLoader(false);
+    }) 
+    : 
+    myCursos.then( value => {
+        setCurso(value);
+        setLoader(false);
+    })
+
+    }, [catId]);
+
+
+    console.log(`q categoria es ${catId}`);
     return ( 
         <div className="ItemListContainer">
-{curso?.map((item) => {
-                return(
-                    <ItemList key={item.id} id={item.id} img={item.img} name={item.name} description={item.description} price={item.precio}/>
-                 );
-            })
-        }
-        </div>
-            );
+{loader ? <CircularProgress/> : curso && curso.length > 0 ? <ItemList categoryId={catId} items={curso}/> :
+<h3>No se encontraron items para esta categoria</h3>
+}
+    </div>);
 }

@@ -1,9 +1,14 @@
 .ItemListContainer {
     margin: auto;
     margin-top: 100px;
-    width: 80%;
+    margin-bottom: 100px;
+    width: 90%;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+
+.ItemListContainer .MuiCircularProgress-colorPrimary {
+    color: lightseagreen;
 }
