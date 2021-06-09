@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import Purchase from "../CartButtons/Purchase";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
@@ -13,11 +13,16 @@ export default function ItemDetail({
   categoria,
   descriptionLarga,
 }) {
+  const [cart, setCart] = useState(false);
   const [cantidad, setCantidad] = useState(1);
-
   const handleCantidad = (cantidad) => {
     setCantidad(cantidad);
   };
+
+  const handleClick = () => {
+    setCart(true);
+  };
+
   console.log("cate:", categoria);
   return (
     <div className="ItemDetail">
@@ -32,19 +37,18 @@ export default function ItemDetail({
             {descriptionLarga}
           </p>
           <p className="precio">{price}</p>
-          <ItemCount stock={stock} initial={1} onAdd={handleCantidad} />
-          <div className="AddToCart">
-            {cantidad <= 1 ? (
-              <Link to="/cart">
-                <button>Agregar al Carro ({cantidad})</button>{" "}
-              </Link>
-            ) : (
-              <Link to="/cart">
-                <button>Finalizar Compra</button>{" "}
-              </Link>
-            )}
-          </div>
+          {cart ? (
+            <Purchase />
+          ) : (
+            <ItemCount
+              stock={stock}
+              initial={1}
+              onAdd={handleCantidad}
+              handle={handleClick}
+            />
+          )}
         </div>
+        <h4>Cantidad que añadirás al carro {cantidad}</h4>
       </div>
     </div>
   );

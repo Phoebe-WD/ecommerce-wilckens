@@ -65,32 +65,3 @@
     justify-content: space-around;
     align-items: flex-start;
 }
-
-.ItemDetail .AddToCart {
-    display: block;
-    margin: 0 auto;
-}
-
-.ItemDetail .AddToCart a {
-    text-decoration: none;
-}
-
-.ItemDetail .AddToCart button {
-    display: block;
-    margin: 0 auto;
-    margin-top: 5px;
-    border: 1px solid lightseagreen;
-    background-color: #fff;
-    cursor: pointer;
-    padding: 10px;
-    font-family: 'Balsamiq Sans',
-        cursive;
-    font-weight: 400;
-    border-radius: 10px;
-}
-
-.ItemDetail .AddToCart button:hover {
-    color: #fff;
-    background-color: lightseagreen;
-    transition: all .4s ease;
-}

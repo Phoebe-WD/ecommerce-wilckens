@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import RemoveCircleIcon from "@material-ui/icons/RemoveCircle";
 import "./ItemCount.css";
+import AddToCart from "../CartButtons/AddToCart";
 
-export default function ItemCount({ stock, initial, onAdd }) {
+export default function ItemCount({ stock, initial, onAdd, handle }) {
   const [contador, setContador] = useState(initial);
 
   const addCounter = () => {
@@ -37,6 +38,7 @@ export default function ItemCount({ stock, initial, onAdd }) {
           <AddCircleIcon style={{ color: "lightseagreen" }} />
         </button>
       </div>
+      <AddToCart handle={handle} />
     </div>
   );
 }
