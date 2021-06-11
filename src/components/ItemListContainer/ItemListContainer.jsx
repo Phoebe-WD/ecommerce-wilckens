@@ -15,7 +15,7 @@ export default function ItemListContainer() {
       setTimeout(() => {
         resolve(Data);
       }, 2000);
-      console.log(Data);
+      console.log("itemlist data", Data);
     });
     catId
       ? myCursos.then((result) => {

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Purchase from "../CartButtons/Purchase";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
+import { useCart } from "../Context/CartContext";
 
 export default function ItemDetail({
   id,
@@ -15,6 +16,7 @@ export default function ItemDetail({
 }) {
   const [cart, setCart] = useState(false);
   const [cantidad, setCantidad] = useState(1);
+  const carrito = useCart();
   const handleCantidad = (cantidad) => {
     setCantidad(cantidad);
   };
@@ -23,6 +25,14 @@ export default function ItemDetail({
     setCart(true);
   };
 
+  const addNewItem = () => {
+    carrito.addItem({
+      name: name,
+      precio: price,
+      quantity: cantidad,
+    });
+  };
+  console.log("cart en item detail", carrito);
   console.log("cate:", categoria);
   return (
     <div className="ItemDetail">
@@ -38,7 +48,7 @@ export default function ItemDetail({
           </p>
           <p className="precio">{price}</p>
           {cart ? (
-            <Purchase />
+            <Purchase onClick={addNewItem} />
           ) : (
             <ItemCount
               stock={stock}
