@@ -30,6 +30,9 @@ function App() {
             <Route exact path="/producto/:productId">
               <ItemDetailContainer />
             </Route>
+            <Route exact path="/cart">
+              <Error404 />
+            </Route>
             <Route exact path="">
               <Error404 />
             </Route>
