@@ -1,0 +1,28 @@
+ .Cart {
+     display: block;
+     margin: 0 auto;
+ }
+
+ .Cart h2 {
+     text-align: center;
+ }
+
+ .Cart button {
+     display: block;
+     margin: 0 auto;
+     margin-top: 5px;
+     border: 1px solid lightseagreen;
+     background-color: #fff;
+     cursor: pointer;
+     padding: 10px;
+     font-family: 'Balsamiq Sans',
+         cursive;
+     font-weight: 400;
+     border-radius: 10px;
+ }
+
+ .Cart button:hover {
+     color: #fff;
+     background-color: lightseagreen;
+     transition: all .4s ease;
+ }

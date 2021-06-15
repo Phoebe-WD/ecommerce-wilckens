@@ -21,19 +21,17 @@ export default function ItemDetail({
     setCantidad(cantidad);
   };
 
-  const handleClick = () => {
-    setCart(true);
-  };
-
   const addNewItem = () => {
+    setCart(true);
     carrito.addItem({
+      id: id,
       name: name,
       precio: price,
       quantity: cantidad,
     });
+    console.log("carrito", carrito);
   };
-  console.log("cart en item detail", carrito);
-  console.log("cate:", categoria);
+
   return (
     <div className="ItemDetail">
       <div className="ItemsDetails">
@@ -48,13 +46,13 @@ export default function ItemDetail({
           </p>
           <p className="precio">{price}</p>
           {cart ? (
-            <Purchase onClick={addNewItem} />
+            <Purchase />
           ) : (
             <ItemCount
               stock={stock}
               initial={1}
               onAdd={handleCantidad}
-              handle={handleClick}
+              handle={addNewItem}
             />
           )}
         </div>

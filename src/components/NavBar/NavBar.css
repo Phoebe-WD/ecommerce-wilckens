@@ -59,3 +59,7 @@
     color: var(--text-active);
     text-decoration: line-through;
 }
+
+.MuiSvgIcon-root {
+    color: var(--color-principal);
+}

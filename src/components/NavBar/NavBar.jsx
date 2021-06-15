@@ -28,7 +28,9 @@ export default function NavBar() {
               <Link to="/category/3"> Framework </Link>
             </li>
           </ul>
-          <CartWidget />
+          <Link to="/cart">
+            <CartWidget />
+          </Link>
         </nav>
       </header>
     </div>
