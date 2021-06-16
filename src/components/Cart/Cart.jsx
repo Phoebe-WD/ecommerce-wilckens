@@ -32,7 +32,7 @@ export default function Cart() {
                 <p key={items.id}>{items.quantity}</p>
               </td>
               <td>
-                <button onClick={() => carrito.deleteItem(items.id)}>
+                <button onClick={() => carrito.deleteItem(items)}>
                   <DeleteIcon />
                 </button>
               </td>

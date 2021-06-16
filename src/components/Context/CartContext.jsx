@@ -41,18 +41,15 @@ export default function CartProvider({ children }) {
 
   const deleteItem = (item) => {
     const removeSum = () => {
-      return (
-        isCart.addedItem.reduce(
-          (acc, items) => (acc += items.precio * items.quantity),
-          0
-        ) -
-        item.quantity * item.precio
+      return isCart.addedItem.reduce(
+        (acc, items) => (acc += items.precio * items.quantity),
+        0
       );
     };
     const removeItem = isCart.addedItem.findIndex(
       (remove) => remove.id === item.id
     );
-    if (removeItem) {
+    if (removeItem !== -1) {
       isCart.addedItem.splice(removeItem, 1);
       setIsCart({
         ...isCart,
