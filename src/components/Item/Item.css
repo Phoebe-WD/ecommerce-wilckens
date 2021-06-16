@@ -10,10 +10,6 @@
     margin: 0 auto;
 }
 
-.Item .precio::before {
-    content: "$"
-}
-
 .Item a,
 .Item p {
     font-family: 'Balsamiq Sans',

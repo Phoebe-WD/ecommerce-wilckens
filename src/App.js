@@ -14,7 +14,7 @@ function App() {
     <CartProvider>
       <Router>
         <NavBar />
-        <div>
+        <div className="content">
           <Switch>
             <Route exact path="/">
               <ItemListContainer />

@@ -26,3 +26,14 @@
      background-color: lightseagreen;
      transition: all .4s ease;
  }
+
+ .Cart .carritoInfo {
+     display: flex;
+     flex-flow: row nowrap;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .Cart .carritoInfo table td button {
+     border: none;
+ }

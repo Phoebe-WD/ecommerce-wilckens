@@ -44,7 +44,7 @@ export default function ItemDetail({
             <strong>Descripción: </strong>
             {descriptionLarga}
           </p>
-          <p className="precio">{price}</p>
+          <p className="precio">${price}</p>
           {cart ? (
             <Purchase />
           ) : (

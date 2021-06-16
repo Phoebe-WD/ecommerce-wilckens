@@ -1,5 +1,5 @@
-import React, { useContext, createContext, useState, useEffect } from "react";
-import Data from "../../data";
+import React, { useContext, createContext, useState } from "react";
+import Swal from "sweetalert2";
 
 export const CartContext = createContext();
 export const useCart = () => useContext(CartContext);
@@ -9,19 +9,22 @@ const InitialState = {
 };
 export default function CartProvider({ children }) {
   const [isCart, setIsCart] = useState(InitialState);
-  const [product, setProduct] = useState(null);
 
   const addItem = (item) => {
     const totalSum = () => {
-      return isCart.addedItem.reduce(
-        (acc, items) => (acc += items.precio * items.quantity),
-        0
+      return (
+        isCart.addedItem.reduce(
+          (acc, items) => (acc += items.precio * items.quantity),
+          0
+        ) +
+        item.quantity * item.precio
       );
     };
     const isInCart = isCart.addedItem.find((added) => added.id === item.id);
+    const suma = totalSum(isCart, item);
     if (isInCart) {
       isInCart.quantity += item.quantity;
-      setIsCart({ ...isCart });
+      setIsCart({ ...isCart, totalPrice: suma });
     } else {
       const newAddedItems = [...isCart.addedItem, item];
       setIsCart({
@@ -29,7 +32,6 @@ export default function CartProvider({ children }) {
         addedItem: newAddedItems,
         totalPrice: totalSum(isCart.totalPrice, item),
       });
-      console.log("carrito en context", isCart);
     }
   };
 
@@ -38,29 +40,38 @@ export default function CartProvider({ children }) {
   };
 
   const deleteItem = (item) => {
-    if (
-      isCart.addedItem.splice(
-        isCart.addedItem.findIndex((remove) => remove.id !== item.id),
-        1
-      )
-    ) {
-      console.log("item borrado");
+    const removeSum = () => {
+      return (
+        isCart.addedItem.reduce(
+          (acc, items) => (acc += items.precio * items.quantity),
+          0
+        ) -
+        item.quantity * item.precio
+      );
+    };
+    const removeItem = isCart.addedItem.findIndex(
+      (remove) => remove.id === item.id
+    );
+    if (removeItem) {
+      isCart.addedItem.splice(removeItem, 1);
+      setIsCart({
+        ...isCart,
+        totalPrice: removeSum(isCart.totalPrice, item),
+      });
+    } else {
+      Swal.fire({
+        title: "Ups!",
+        text: "No tienes este producto en tu carrito!",
+        icon: "error",
+        confirmButtonColor: "lightseagreen",
+        showCloseButton: true,
+      });
     }
   };
   console.log("carrito en context", isCart);
-  useEffect(() => {
-    const getItems = new Promise((resolve) => {
-      resolve(Data);
-      console.log(Data);
-    });
-    getItems.then((result) => {
-      setProduct(result);
-    });
-  }, []);
+
   return (
-    <CartContext.Provider
-      value={{ isCart, addItem, clear, deleteItem, product }}
-    >
+    <CartContext.Provider value={{ isCart, addItem, clear, deleteItem }}>
       {children}
     </CartContext.Provider>
   );

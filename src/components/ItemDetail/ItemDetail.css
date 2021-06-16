@@ -24,10 +24,6 @@
     margin: 0 auto;
 }
 
-.ItemDetail .precio::before {
-    content: "$"
-}
-
 .ItemDetail h2,
 .ItemDetail p {
     font-family: 'Balsamiq Sans',
