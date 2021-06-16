@@ -52,6 +52,7 @@
     font-size: 18px;
 }
 
-.FooterEcom .IconsSocial a:hover {
+.FooterEcom .IconsSocial a:hover,
+.FooterEcom .IconsSocial a svg:hover {
     color: var(--text-hover);
 }

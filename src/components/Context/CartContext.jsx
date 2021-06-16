@@ -6,9 +6,24 @@ export const useCart = () => useContext(CartContext);
 const InitialState = {
   addedItem: [],
   totalPrice: 0,
+  totalQuantity: 0,
 };
 export default function CartProvider({ children }) {
   const [isCart, setIsCart] = useState(InitialState);
+
+  const sumQuantity = (isCart, item) => {
+    return (
+      isCart.addedItem.reduce((acc, items) => (acc += items.quantity), 0) +
+      item.quantity
+    );
+  };
+
+  const subQuantity = (isCart, item) => {
+    return (
+      isCart.addedItem.reduce((acc, items) => (acc += items.quantity), 0) -
+      item.quantity
+    );
+  };
 
   const addItem = (item) => {
     const totalSum = () => {
@@ -22,6 +37,7 @@ export default function CartProvider({ children }) {
     };
     const isInCart = isCart.addedItem.find((added) => added.id === item.id);
     const suma = totalSum(isCart, item);
+    const cantidad = sumQuantity(isCart, item);
     if (isInCart) {
       isInCart.quantity += item.quantity;
       setIsCart({ ...isCart, totalPrice: suma });
@@ -31,6 +47,7 @@ export default function CartProvider({ children }) {
         ...isCart,
         addedItem: newAddedItems,
         totalPrice: totalSum(isCart.totalPrice, item),
+        totalQuantity: cantidad,
       });
     }
   };
@@ -49,11 +66,13 @@ export default function CartProvider({ children }) {
     const removeItem = isCart.addedItem.findIndex(
       (remove) => remove.id === item.id
     );
+    const cantidad = subQuantity(isCart, item);
     if (removeItem !== -1) {
       isCart.addedItem.splice(removeItem, 1);
       setIsCart({
         ...isCart,
         totalPrice: removeSum(isCart.totalPrice, item),
+        totalQuantity: cantidad,
       });
     } else {
       Swal.fire({

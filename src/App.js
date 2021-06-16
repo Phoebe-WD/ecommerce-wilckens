@@ -7,7 +7,7 @@ import React from "react";
 import Footer from "./components/Footer/Footer";
 import Error404 from "./components/Error404/Error404";
 import CartProvider from "./components/Context/CartContext";
-import Cart from "./components/Cart/Cart";
+import CartContainer from "./components/CartContainer/CartContianer";
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
               <ItemDetailContainer />
             </Route>
             <Route exact path="/cart">
-              <Cart />
+              <CartContainer />
             </Route>
             <Route exact path="">
               <Error404 />
