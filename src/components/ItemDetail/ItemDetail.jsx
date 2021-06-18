@@ -29,7 +29,6 @@ export default function ItemDetail({
       precio: price,
       quantity: cantidad,
     });
-    console.log("carrito", carrito);
   };
 
   return (

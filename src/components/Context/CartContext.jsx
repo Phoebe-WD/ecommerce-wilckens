@@ -84,7 +84,6 @@ export default function CartProvider({ children }) {
       });
     }
   };
-  console.log("carrito en context", isCart);
 
   return (
     <CartContext.Provider value={{ isCart, addItem, clear, deleteItem }}>

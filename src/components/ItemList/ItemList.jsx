@@ -3,7 +3,6 @@ import Item from "../Item/Item";
 import "./ItemList.css";
 
 export default function ItemList({ items, categoryId }) {
-  console.log(categoryId);
   return (
     <div className="ItemList">
       {items?.map((item) => {

@@ -9,28 +9,21 @@ export default function ItemDetailContainer() {
   const [product, setProduct] = useState(null);
   const [loader, setLoader] = useState(false);
   const { productId } = useParams();
-  console.log(productId);
   useEffect(() => {
     const getItems = new Promise((resolve) => {
       setLoader(true);
       setTimeout(() => resolve(Data), 2000);
-      console.log(Data);
     });
     productId
       ? getItems.then((value) => {
-          console.log(productId + " param");
           setProduct(value.filter((p) => p.id === parseInt(productId)));
           setLoader(false);
-          console.log("data param", value);
         })
       : getItems.then((result) => {
           setProduct(result);
           setLoader(false);
-          console.log("data completa", result);
         });
   }, [productId]);
-  console.log(`que item soy ${productId}`);
-  console.log("product seteado", product);
 
   return (
     <div className="ItemDetailContainer">

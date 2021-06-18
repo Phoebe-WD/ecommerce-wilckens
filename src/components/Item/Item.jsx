@@ -12,7 +12,6 @@ export default function Item({
   categoria,
   descriptionLarga,
 }) {
-  console.log(categoria);
   return (
     <div className="Item">
       <div className="ItemProduct">

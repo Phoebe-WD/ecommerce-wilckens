@@ -15,7 +15,6 @@ export default function ItemListContainer() {
       setTimeout(() => {
         resolve(Data);
       }, 2000);
-      console.log("itemlist data", Data);
     });
     catId
       ? myCursos.then((result) => {
@@ -29,7 +28,6 @@ export default function ItemListContainer() {
         });
   }, [catId]);
 
-  console.log(`q categoria es ${catId}`);
   return (
     <div className="ItemListContainer">
       {loader ? (
