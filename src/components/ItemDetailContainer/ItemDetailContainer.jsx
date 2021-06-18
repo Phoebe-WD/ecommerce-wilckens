@@ -2,27 +2,24 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
-import Data from "../../data";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { getFirestore } from "../../firebase";
 
 export default function ItemDetailContainer() {
   const [product, setProduct] = useState(null);
   const [loader, setLoader] = useState(false);
   const { productId } = useParams();
   useEffect(() => {
-    const getItems = new Promise((resolve) => {
-      setLoader(true);
-      setTimeout(() => resolve(Data), 2000);
-    });
-    productId
-      ? getItems.then((value) => {
-          setProduct(value.filter((p) => p.id === parseInt(productId)));
-          setLoader(false);
-        })
-      : getItems.then((result) => {
-          setProduct(result);
-          setLoader(false);
-        });
+    const getItems = getFirestore();
+    const itemCollection = getItems.collection("Items");
+    itemCollection
+      .get()
+      .then((res) => {
+        const items = res.docs.map((item) => item.data());
+        console.log(items);
+        setProduct(items.filter((item) => item.id === productId));
+      })
+      .then(() => setLoader(true));
   }, [productId]);
 
   return (
