@@ -10,3 +10,7 @@ This is a Ecommerce website created as a final project for a course to learn rea
 
 #### How it Looks 😎
 ![Project](https://i.imgur.com/BOvyEwF.gif)
+
+
+##### Toy chikita
+![baby yoda](http://pa1.narvii.com/7469/651eab7c9c6a59ebb2c91b70dcf597ef45d81840r1-320-320_00.gif)
