@@ -4,24 +4,40 @@ import "./ItemListContainer.css";
 import { useParams } from "react-router";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { getFirestore } from "../../firebase";
+import Swal from "sweetalert2";
 
 export default function ItemListContainer() {
   const [curso, setCurso] = useState(null);
-  const [loader, setLoader] = useState(true);
+  const [loader, setLoader] = useState(false);
   const { catId } = useParams();
   useEffect(() => {
+    setLoader(true);
     const getItems = getFirestore();
     const itemCollection = getItems.collection("Items");
-    itemCollection
+    const filtro = catId
+      ? itemCollection.where("categoryId", "==", catId)
+      : itemCollection;
+    filtro
       .get()
       .then((res) => {
-        const items = res.docs.map((item) => item.data());
-        console.log(items);
-        setCurso(items.filter((item) => item.categoryId === catId));
+        if (res.size === 0) {
+          Swal.fire({
+            title: "Ups!",
+            text: "No se encontraron productos en esta categoría!",
+            icon: "error",
+            confirmButtonColor: "lightseagreen",
+            showCloseButton: true,
+          });
+        }
+        setCurso(
+          res.docs.map((doc) => {
+            return { id: doc.id, ...doc.data() };
+          })
+        );
       })
-      .then(() => setLoader(false));
+      .finally(() => setLoader(false));
   }, [catId]);
-
+  console.log(curso);
   return (
     <div className="ItemListContainer">
       {loader ? (

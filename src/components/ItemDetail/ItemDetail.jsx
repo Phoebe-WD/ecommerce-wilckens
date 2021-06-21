@@ -3,6 +3,7 @@ import Purchase from "../CartButtons/Purchase";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 import { useCart } from "../Context/CartContext";
+import Swal from "sweetalert2";
 
 export default function ItemDetail({
   id,
@@ -28,6 +29,13 @@ export default function ItemDetail({
       name: name,
       precio: price,
       quantity: cantidad,
+    });
+    Swal.fire({
+      title: "Gracias!",
+      text: "Su producto ha sido añadido con éxito",
+      icon: "success",
+      confirmButtonColor: "lightseagreen",
+      showCloseButton: true,
     });
   };
 

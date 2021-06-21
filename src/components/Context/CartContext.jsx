@@ -54,6 +54,13 @@ export default function CartProvider({ children }) {
 
   const clear = () => {
     setIsCart(InitialState);
+    Swal.fire({
+      title: "",
+      text: "El carrito ha sido limpiado con éxito",
+      icon: "success",
+      confirmButtonColor: "lightseagreen",
+      showCloseButton: true,
+    });
   };
 
   const deleteItem = (item) => {
@@ -73,6 +80,13 @@ export default function CartProvider({ children }) {
         ...isCart,
         totalPrice: removeSum(isCart.totalPrice, item),
         totalQuantity: cantidad,
+      });
+      Swal.fire({
+        title: "",
+        text: "Se ha removido el producto con éxito",
+        icon: "success",
+        confirmButtonColor: "lightseagreen",
+        showCloseButton: true,
       });
     } else {
       Swal.fire({

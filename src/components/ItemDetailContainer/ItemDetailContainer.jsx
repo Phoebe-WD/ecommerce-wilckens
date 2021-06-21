@@ -4,22 +4,42 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { getFirestore } from "../../firebase";
+import Swal from "sweetalert2";
 
 export default function ItemDetailContainer() {
   const [product, setProduct] = useState(null);
   const [loader, setLoader] = useState(false);
   const { productId } = useParams();
   useEffect(() => {
+    setLoader(true);
     const getItems = getFirestore();
     const itemCollection = getItems.collection("Items");
-    itemCollection
+    const idProducto = productId;
+    const item = itemCollection.doc(idProducto);
+    item
       .get()
       .then((res) => {
-        const items = res.docs.map((item) => item.data());
-        console.log(items);
-        setProduct(items.filter((item) => item.id === productId));
+        if (!res.exists) {
+          Swal.fire({
+            title: "Ups!",
+            text: "No se encontraron productos!",
+            icon: "error",
+            confirmButtonColor: "lightseagreen",
+            showCloseButton: true,
+          });
+        }
+        setProduct([{ id: res.id, ...res.data() }]);
       })
-      .then(() => setLoader(true));
+      .catch((error) => {
+        Swal.fire({
+          title: "Ups!",
+          text: "Error al buscar productos!",
+          icon: "error",
+          confirmButtonColor: "lightseagreen",
+          showCloseButton: true,
+        });
+      })
+      .finally(() => setLoader(false));
   }, [productId]);
 
   return (
