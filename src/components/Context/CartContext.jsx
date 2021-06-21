@@ -40,7 +40,7 @@ export default function CartProvider({ children }) {
     const cantidad = sumQuantity(isCart, item);
     if (isInCart) {
       isInCart.quantity += item.quantity;
-      setIsCart({ ...isCart, totalPrice: suma });
+      setIsCart({ ...isCart, totalPrice: suma, totalQuantity: cantidad });
     } else {
       const newAddedItems = [...isCart.addedItem, item];
       setIsCart({
