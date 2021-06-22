@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import Error404 from "./components/Error404/Error404";
 import CartProvider from "./components/Context/CartContext";
 import CartContainer from "./components/CartContainer/CartContianer";
+import FinalizarCompra from "./components/FinalizarCompra/FinalizarCompra";
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
             </Route>
             <Route exact path="/cart">
               <CartContainer />
+            </Route>
+            <Route exact path="/finalizarcompra">
+              <FinalizarCompra />
             </Route>
             <Route exact path="">
               <Error404 />

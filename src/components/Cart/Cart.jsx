@@ -2,6 +2,7 @@ import React from "react";
 import { useCart } from "../Context/CartContext";
 import "./Cart.css";
 import DeleteIcon from "@material-ui/icons/Delete";
+import { Link } from "react-router-dom";
 
 export default function Cart() {
   const carrito = useCart();
@@ -44,6 +45,9 @@ export default function Cart() {
         );
       })}
       <div className="precioTotal">Total: ${total > 0 ? total : 0}</div>
+      <Link to="/finalizarcompra">
+        <button>Finalizar Compra</button>
+      </Link>
       <button onClick={carrito.clear}>Limpiar Carrito</button>
     </div>
   );

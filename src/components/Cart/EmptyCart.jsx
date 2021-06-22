@@ -1,6 +1,7 @@
 import React from "react";
 import SentimentVeryDissatisfiedIcon from "@material-ui/icons/SentimentVeryDissatisfied";
 import { Link } from "react-router-dom";
+import "./EmptyCart.css";
 
 export default function EmptyCart() {
   return (
