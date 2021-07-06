@@ -1,7 +1,12 @@
+.Item {
+    width: 20%;
+    margin-top: 30px;
+}
+
 .Item .ItemProduct {
     width: 100%;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
 }
 
 .Item img,

@@ -1,0 +1,9 @@
+.Banner {
+    width: 100%;
+}
+
+.Banner img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}

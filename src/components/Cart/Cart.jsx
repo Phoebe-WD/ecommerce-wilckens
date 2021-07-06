@@ -9,41 +9,43 @@ export default function Cart() {
   const cart = carrito.isCart.addedItem;
   const total = carrito.isCart.totalPrice;
 
+  const infoCart = cart?.map((items) => {
+    return (
+      <tr key={items.id}>
+        <td>{items.name}</td>
+        <td>${items.precio}</td>
+        <td>{items.quantity}</td>
+        <td>
+          <button onClick={() => carrito.deleteItem(items)}>
+            <DeleteIcon />
+          </button>
+        </td>
+        <td>
+          <p>${items.precio * items.quantity}</p>
+        </td>
+      </tr>
+    );
+  });
+
   return (
     <div className="Cart">
       <h2>Carrito</h2>
-      {cart?.map((items) => {
-        return (
-          <div className="carritoInfo">
-            <table>
-              <tr>
-                <th>Nombre producto</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th></th>
-                <th>Total</th>
-              </tr>
-              <td>
-                <p key={items.id}>{items.name}</p>
-              </td>
-              <td>
-                <p key={items.id}>${items.precio}</p>
-              </td>
-              <td>
-                <p key={items.id}>{items.quantity}</p>
-              </td>
-              <td>
-                <button onClick={() => carrito.deleteItem(items)}>
-                  <DeleteIcon />
-                </button>
-              </td>
-              <td>
-                <p>${items.precio * items.quantity}</p>
-              </td>
-            </table>
-          </div>
-        );
-      })}
+
+      <div className="carritoInfo">
+        <table className="tablaCart">
+          <tbody>
+            <tr>
+              <th>Nombre producto</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th></th>
+              <th>Total</th>
+            </tr>
+            {infoCart}
+          </tbody>
+        </table>
+      </div>
+
       <div className="precioTotal">Total: ${total > 0 ? total : 0}</div>
       <Link to="/finalizarcompra">
         <button>Finalizar Compra</button>

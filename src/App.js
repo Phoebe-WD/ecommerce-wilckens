@@ -9,6 +9,7 @@ import Error404 from "./components/Error404/Error404";
 import CartProvider from "./components/Context/CartContext";
 import CartContainer from "./components/CartContainer/CartContianer";
 import FinalizarCompra from "./components/FinalizarCompra/FinalizarCompra";
+import Banner from "./components/Banner/Banner";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <div className="content">
           <Switch>
             <Route exact path="/">
+              <Banner />
               <ItemListContainer />
             </Route>
             <Route exact path="/category/">

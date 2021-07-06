@@ -16,16 +16,22 @@ export default function NavBar() {
         <nav>
           <ul>
             <li>
-              <Link to="/"> Home </Link>
+              <Link to="/"> Inicio </Link>
             </li>
             <li>
-              <Link to="/category/1"> HTML & CSS </Link>
-            </li>
-            <li>
-              <Link to="/category/2"> Programación </Link>
-            </li>
-            <li>
-              <Link to="/category/3"> Framework </Link>
+              <Link to="#">Categorías</Link>
+              <ul>
+                <li>
+                  <Link to="/category/htmlycss"> HTML & CSS </Link>
+                </li>
+
+                <li>
+                  <Link to="/category/programacion"> Programación </Link>
+                </li>
+                <li>
+                  <Link to="/category/frameworks"> Frameworks </Link>
+                </li>
+              </ul>
             </li>
           </ul>
           <Link to="/cart">

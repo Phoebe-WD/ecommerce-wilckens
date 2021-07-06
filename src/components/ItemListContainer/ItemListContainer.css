@@ -1,14 +1,20 @@
 .ItemListContainer {
     margin: auto;
-    margin-top: 100px;
+    margin-top: 70px;
     margin-bottom: 100px;
     width: 90%;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
     align-items: center;
 }
 
 .ItemListContainer .MuiCircularProgress-colorPrimary {
     color: lightseagreen;
+}
+
+.ItemListContainer h2 {
+    font-family: 'Balsamiq Sans',
+        cursive;
+    font-size: 42px;
 }

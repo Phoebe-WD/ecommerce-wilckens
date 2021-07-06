@@ -52,14 +52,36 @@
 
 .NavBar header nav ul li a:hover {
     color: var(--text-hover);
-    text-decoration: line-through;
-}
-
-.NavBar header nav ul li a:active {
-    color: var(--text-active);
-    text-decoration: line-through;
+    text-decoration: underline;
 }
 
 .MuiSvgIcon-root {
     color: var(--color-principal);
+}
+
+.NavBar header nav ul ul {
+    display: none;
+    position: absolute;
+    top: 5.5%;
+    right: 4%;
+}
+
+.NavBar header nav ul ul li {
+    width: 150px;
+    line-height: 120%;
+    padding: 10px 15px;
+    border: 1px solid var(--text-button);
+}
+
+.NavBar header nav ul ul a {
+    text-decoration: none;
+}
+
+.NavBar header nav ul li:hover>ul {
+    display: block;
+}
+
+.NavBar header nav ul ul li a:hover {
+    color: var(--text-button);
+    text-decoration: underline;
 }

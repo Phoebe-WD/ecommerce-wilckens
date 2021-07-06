@@ -40,6 +40,7 @@ export default function ItemListContainer() {
   console.log(curso);
   return (
     <div className="ItemListContainer">
+      <h2>Nuestros Cursos</h2>
       {loader ? (
         <CircularProgress />
       ) : curso && curso.length > 0 ? (
