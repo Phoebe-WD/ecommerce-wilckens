@@ -1,12 +1,16 @@
  .Cart {
      display: flex;
-     flex-flow: column nowrap;
+     flex-flow: column wrap;
      justify-content: space-between;
      align-items: center;
+     width: 100%;
+     height: auto;
  }
 
  .Cart h2 {
      text-align: center;
+     font-family: 'Balsamiq Sans',
+         cursive;
  }
 
  .Cart a {
@@ -38,8 +42,70 @@
      flex-flow: row nowrap;
      justify-content: center;
      align-items: center;
+     width: 80%;
  }
 
  .Cart .carritoInfo table td button {
      border: none;
  }
+
+ .Cart .carritoInfo table {
+     /* border: 1px solid lightseagreen; */
+     width: 50%;
+ }
+
+ .Cart .carritoInfo table th,
+ .Cart .carritoInfo table td {
+     text-align: center;
+     border: 2px solid lightseagreen;
+ }
+
+ .Cart .carritoInfo table th:last-child,
+ .Cart .carritoInfo table td:last-child {
+     border: none;
+ }
+
+ .Cart .precioTotal {
+     width: 28%;
+     display: flex;
+     justify-content: flex-end;
+     align-items: flex-end;
+     font-weight: bold;
+     font-size: 20px;
+ }
+
+ .Cart .botones {
+     width: 15%;
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .Cart .botones button {
+     padding: 12px;
+ }
+
+ .Cart .botones .MuiSvgIcon-root {
+     width: .6em;
+     height: .6em;
+ }
+
+ /* MEDIA QUERY */
+ /* MOBILE S */
+ @media screen and (min-width:319px) and (max-width:374px) {}
+
+ /*Mobile M*/
+ @media screen and (min-width:375px) and (max-width:424px) {}
+
+ /*Mobile L*/
+ @media screen and (min-width:425px) and (max-width:767.98px) {}
+
+ /*Tablet*/
+ @media screen and (min-width:768px) and (max-width:1023.98px) {}
+
+ /*TABLET GRANDE */
+ @media screen and (min-width:1024px) and (max-width:1299.98px) {}
+
+ /* LAPTOP */
+ @media screen and (min-width:1300px) and (max-width:1500px) {}

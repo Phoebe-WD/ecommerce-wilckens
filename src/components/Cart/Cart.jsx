@@ -16,12 +16,12 @@ export default function Cart() {
         <td>${items.precio}</td>
         <td>{items.quantity}</td>
         <td>
+          <p>${items.precio * items.quantity}</p>
+        </td>
+        <td>
           <button onClick={() => carrito.deleteItem(items)}>
             <DeleteIcon />
           </button>
-        </td>
-        <td>
-          <p>${items.precio * items.quantity}</p>
         </td>
       </tr>
     );
@@ -38,8 +38,8 @@ export default function Cart() {
               <th>Nombre producto</th>
               <th>Precio</th>
               <th>Cantidad</th>
-              <th></th>
               <th>Total</th>
+              <th></th>
             </tr>
             {infoCart}
           </tbody>
@@ -47,10 +47,14 @@ export default function Cart() {
       </div>
 
       <div className="precioTotal">Total: ${total > 0 ? total : 0}</div>
-      <Link to="/finalizarcompra">
-        <button>Finalizar Compra</button>
-      </Link>
-      <button onClick={carrito.clear}>Limpiar Carrito</button>
+      <div className="botones">
+        <Link to="/finalizarcompra">
+          <button>Finalizar Compra</button>
+        </Link>
+        <button onClick={carrito.clear}>
+          Limpiar Carrito <DeleteIcon />
+        </button>
+      </div>
     </div>
   );
 }

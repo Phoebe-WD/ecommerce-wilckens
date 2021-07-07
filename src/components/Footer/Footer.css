@@ -11,6 +11,8 @@
 
 .FooterEcom {
     position: relative;
+    width: 100%;
+    height: 80px;
     bottom: 0;
 }
 
@@ -55,4 +57,50 @@
 .FooterEcom .IconsSocial a:hover,
 .FooterEcom .IconsSocial a svg:hover {
     color: var(--text-hover);
+}
+
+/* MEDIA QUERY */
+/* MOBILE S */
+@media screen and (min-width:319px) and (max-width:374px) {
+    .FooterEcom .FooterContainer {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .FooterEcom .IconsSocial {
+        gap: 15px;
+    }
+}
+
+/*Mobile M*/
+@media screen and (min-width:375px) and (max-width:424px) {
+    .FooterEcom .FooterContainer {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .FooterEcom .IconsSocial {
+        gap: 15px;
+    }
+}
+
+/*Mobile L*/
+@media screen and (min-width:425px) and (max-width:767.98px) {
+    .FooterEcom .FooterContainer {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .FooterEcom .IconsSocial {
+        gap: 15px;
+    }
 }

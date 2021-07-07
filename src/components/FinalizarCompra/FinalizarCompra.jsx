@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useCart } from "../Context/CartContext";
 import { getFirestore } from "../../firebase";
+import "./FinalizarCompra.css";
 
 export default function FinalizarCompra() {
   const [order, setOrder] = useState("");
@@ -49,7 +50,7 @@ export default function FinalizarCompra() {
   return (
     <div className="FinalizarCompra">
       {order ? (
-        <div>
+        <div className="ordenCompra">
           <h3>Tu número de orden es: {order}</h3>
           <h3>Tu Pedido</h3>
           {cart?.map((items) => {
@@ -67,6 +68,7 @@ export default function FinalizarCompra() {
         </div>
       ) : (
         <div className="FormOrder">
+          <h3>Completa el formulario para finalizar tu compra</h3>
           <form className="Form" onSubmit={updateOrder}>
             <input
               type="text"

@@ -64,6 +64,7 @@
     position: absolute;
     top: 5.5%;
     right: 4%;
+    background-color: #FFFFFF;
 }
 
 .NavBar header nav ul ul li {
@@ -84,4 +85,116 @@
 .NavBar header nav ul ul li a:hover {
     color: var(--text-button);
     text-decoration: underline;
+}
+
+/* MEDIA QUERY */
+/* MOBILE S */
+@media screen and (min-width:319px) and (max-width:374px) {
+    .NavBar header {
+        width: 100%;
+    }
+
+    .NavBar header .logo {
+        width: 30%;
+    }
+
+    .NavBar header nav {
+        width: 70%;
+    }
+
+    .NavBar header .logo img {
+        width: 50%;
+        height: 50%;
+    }
+
+    .NavBar header nav ul ul {
+        top: 6.5%;
+        right: 0%;
+    }
+
+    .NavBar header nav ul li a {
+        margin-right: 15px;
+        font-size: 14px;
+    }
+}
+
+/*Mobile M*/
+@media screen and (min-width:375px) and (max-width:424px) {
+    .NavBar header {
+        width: 100%;
+    }
+
+    .NavBar header .logo {
+        width: 30%;
+    }
+
+    .NavBar header nav {
+        width: 70%;
+    }
+
+    .NavBar header .logo img {
+        width: 50%;
+        height: 50%;
+    }
+
+    .NavBar header nav ul ul {
+        top: 6.5%;
+        right: 0%;
+    }
+
+    .NavBar header nav ul li a {
+        margin-right: 15px;
+        font-size: 14px;
+    }
+}
+
+/*Mobile L*/
+@media screen and (min-width:425px) and (max-width:767.98px) {
+    .NavBar header {
+        width: 100%;
+    }
+
+    .NavBar header .logo {
+        width: 30%;
+    }
+
+    .NavBar header nav {
+        width: 70%;
+    }
+
+    .NavBar header .logo img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .NavBar header nav ul ul {
+        top: 6.5%;
+        right: 0%;
+    }
+
+    .NavBar header nav ul li a {
+        margin-right: 15px;
+        font-size: 14px;
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width:768px) and (max-width:1023.98px) {
+    .NavBar header nav ul ul {
+        top: 6.5%;
+    }
+}
+
+/*TABLET GRANDE */
+@media screen and (min-width:1024px) and (max-width:1299.98px) {
+    .NavBar header nav ul ul {
+        top: 6.5%;
+    }
+}
+
+/* LAPTOP */
+@media screen and (min-width:1300px) and (max-width:1500px) {
+    .NavBar header nav ul ul {
+        top: 6.5%;
+    }
 }

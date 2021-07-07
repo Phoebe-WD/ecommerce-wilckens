@@ -56,3 +56,47 @@
     background-color: lightseagreen;
     transition: all .4s ease;
 }
+
+/* MEDIA QUERY */
+/* MOBILE S */
+@media screen and (min-width:319px) and (max-width:374px) {
+    .Item {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+/*Mobile M*/
+@media screen and (min-width:375px) and (max-width:424px) {
+    .Item {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+/*Mobile L*/
+@media screen and (min-width:425px) and (max-width:767.98px) {
+    .Item {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width:768px) and (max-width:1023.98px) {
+    .Item {
+        width: 50%;
+        margin-top: 30px;
+    }
+}
+
+/*TABLET GRANDE */
+@media screen and (min-width:1024px) and (max-width:1299.98px) {
+    .Item {
+        width: 33.3%;
+        margin-top: 30px;
+    }
+}
+
+/* LAPTOP */
+@media screen and (min-width:1300px) and (max-width:1500px) {}
