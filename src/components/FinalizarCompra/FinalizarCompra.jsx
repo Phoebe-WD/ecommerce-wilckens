@@ -51,7 +51,7 @@ export default function FinalizarCompra() {
     <div className="FinalizarCompra">
       {order ? (
         <div className="ordenCompra">
-          <h3>Tu número de orden es: {order}</h3>
+          <h3>Tu número de orden es: "{order}"</h3>
           <h3>Tu Pedido</h3>
           {cart?.map((items) => {
             return (
@@ -64,7 +64,7 @@ export default function FinalizarCompra() {
               </div>
             );
           })}
-          <p>Le llegarán sus productos en un plazo de 5 días</p>
+          <p>*Le llegarán sus productos en un plazo de 5 días</p>
         </div>
       ) : (
         <div className="FormOrder">
