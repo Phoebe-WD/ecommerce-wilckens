@@ -63,7 +63,6 @@ export default function ItemDetail({
             />
           )}
         </div>
-        <h4>Cantidad que añadirás al carro {cantidad}</h4>
       </div>
     </div>
   );

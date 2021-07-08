@@ -7,7 +7,7 @@ import React from "react";
 import Footer from "./components/Footer/Footer";
 import Error404 from "./components/Error404/Error404";
 import CartProvider from "./components/Context/CartContext";
-import CartContainer from "./components/CartContainer/CartContianer";
+import CartContainer from "./components/CartContainer/CartContainer";
 import FinalizarCompra from "./components/FinalizarCompra/FinalizarCompra";
 import Banner from "./components/Banner/Banner";
 

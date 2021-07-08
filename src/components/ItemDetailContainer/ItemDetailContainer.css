@@ -1,12 +1,11 @@
-/* .ItemDetailContainer {
-    margin: auto;
-    margin-top: 100px;
+.ItemDetailContainer {
+    margin: 0 auto;
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-} */
+}
 
 .ItemDetailContainer .title {
     margin-top: 100px;

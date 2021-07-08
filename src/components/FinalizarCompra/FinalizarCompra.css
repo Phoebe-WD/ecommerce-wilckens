@@ -45,19 +45,37 @@
 
 /* MEDIA QUERY */
 /* MOBILE S */
-@media screen and (min-width:319px) and (max-width:374px) {}
+@media screen and (min-width:319px) and (max-width:374px) {
+    .FinalizarCompra {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .FinalizarCompra h3 {
+        text-align: center;
+    }
+}
 
 /*Mobile M*/
-@media screen and (min-width:375px) and (max-width:424px) {}
+@media screen and (min-width:375px) and (max-width:424px) {
+    .FinalizarCompra h3 {
+        text-align: center;
+    }
+
+    .FinalizarCompra {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
 
 /*Mobile L*/
-@media screen and (min-width:425px) and (max-width:767.98px) {}
+@media screen and (min-width:425px) and (max-width:767.98px) {
+    .FinalizarCompra h3 {
+        text-align: center;
+    }
 
-/*Tablet*/
-@media screen and (min-width:768px) and (max-width:1023.98px) {}
-
-/*TABLET GRANDE */
-@media screen and (min-width:1024px) and (max-width:1299.98px) {}
-
-/* LAPTOP */
-@media screen and (min-width:1300px) and (max-width:1500px) {}
+    .FinalizarCompra {
+        width: 90%;
+        margin: 0 auto;
+    }
+}

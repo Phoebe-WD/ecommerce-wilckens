@@ -50,7 +50,6 @@
  }
 
  .Cart .carritoInfo table {
-     /* border: 1px solid lightseagreen; */
      width: 50%;
  }
 
@@ -93,19 +92,112 @@
 
  /* MEDIA QUERY */
  /* MOBILE S */
- @media screen and (min-width:319px) and (max-width:374px) {}
+ @media screen and (min-width:319px) and (max-width:374px) {
+     .Cart .carritoInfo table {
+         width: 100%;
+     }
+
+     .Cart .botones {
+         width: 90%;
+     }
+
+     .Cart .precioTotal {
+         width: 55%;
+         display: flex;
+         justify-content: flex-end;
+         align-items: flex-end;
+         font-weight: bold;
+         font-size: 20px;
+     }
+
+     .Cart .carritoInfo table th {
+         font-size: 15px;
+     }
+ }
 
  /*Mobile M*/
- @media screen and (min-width:375px) and (max-width:424px) {}
+ @media screen and (min-width:375px) and (max-width:424px) {
+     .Cart .carritoInfo table {
+         width: 100%;
+     }
+
+     .Cart .botones {
+         width: 80%;
+     }
+
+     .Cart .precioTotal {
+         width: 55%;
+         display: flex;
+         justify-content: flex-end;
+         align-items: flex-end;
+         font-weight: bold;
+         font-size: 20px;
+     }
+ }
 
  /*Mobile L*/
- @media screen and (min-width:425px) and (max-width:767.98px) {}
+ @media screen and (min-width:425px) and (max-width:767.98px) {
+     .Cart .carritoInfo table {
+         width: 100%;
+     }
+
+     .Cart .botones {
+         width: 80%;
+     }
+
+     .Cart .precioTotal {
+         width: 55%;
+         display: flex;
+         justify-content: flex-end;
+         align-items: flex-end;
+         font-weight: bold;
+         font-size: 20px;
+     }
+ }
 
  /*Tablet*/
- @media screen and (min-width:768px) and (max-width:1023.98px) {}
+ @media screen and (min-width:768px) and (max-width:1023.98px) {
+     .Cart .carritoInfo table {
+         width: 80%;
+     }
+
+     .Cart .botones {
+         width: 40%;
+     }
+
+     .Cart .precioTotal {
+         width: 45%;
+         display: flex;
+         justify-content: flex-end;
+         align-items: flex-end;
+         font-weight: bold;
+         font-size: 20px;
+     }
+ }
 
  /*TABLET GRANDE */
- @media screen and (min-width:1024px) and (max-width:1299.98px) {}
+ @media screen and (min-width:1024px) and (max-width:1299.98px) {
+     .Cart .carritoInfo table {
+         width: 80%;
+     }
+
+     .Cart .botones {
+         width: 30%;
+     }
+
+     .Cart .precioTotal {
+         width: 45%;
+         display: flex;
+         justify-content: flex-end;
+         align-items: flex-end;
+         font-weight: bold;
+         font-size: 20px;
+     }
+ }
 
  /* LAPTOP */
- @media screen and (min-width:1300px) and (max-width:1500px) {}
+ @media screen and (min-width:1300px) and (max-width:1500px) {
+     .Cart .botones {
+         width: 20%;
+     }
+ }
