@@ -17,5 +17,5 @@ This is a Ecommerce website created as a final project for a course to learn rea
 
 #### How it Looks 😎
 
-[![Project](https://i.imgur.com/ndjJsAT.gif)](https://i.imgur.com/ndjJsAT.gif)
+[![Project](https://i.imgur.com/ndjJsAT.gif)](https://affectionate-wilson-248f44.netlify.app/)
 
